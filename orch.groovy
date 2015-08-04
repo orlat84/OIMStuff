@@ -44,7 +44,7 @@ def printOrchEventDetails(Sql sql, ORCHID) {
 
         def blobContent = new ObjectInputStream(blob.getBinaryStream()).readObject();
         if (blobContent != null) {
-            println blobContent
+            ((Throwable)blobContent).printStackTrace()
         }
     }
 }
